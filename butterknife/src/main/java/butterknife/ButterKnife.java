@@ -360,20 +360,20 @@ public final class ButterKnife {
   @SuppressWarnings("UnusedDeclaration") // Public API.
   @CheckResult @Deprecated
   public static <T extends View> T findById(@NonNull View view, @IdRes int id) {
-    return view.findViewById(id);
+    return (T) view.findViewById(id);
   }
 
   /** @deprecated Compile against API 26 and use {@link Activity#findViewById(int)}. */
   @SuppressWarnings("UnusedDeclaration") // Public API.
   @CheckResult @Deprecated
   public static <T extends View> T findById(@NonNull Activity activity, @IdRes int id) {
-    return activity.findViewById(id);
+    return (T) activity.findViewById(id);
   }
 
   /** @deprecated Compile against API 26 and use {@link Dialog#findViewById(int)}. */
   @SuppressWarnings("UnusedDeclaration") // Public API.
   @CheckResult @Deprecated
   public static <T extends View> T findById(@NonNull Dialog dialog, @IdRes int id) {
-    return dialog.findViewById(id);
+    return (T) dialog.findViewById(id);
   }
 }

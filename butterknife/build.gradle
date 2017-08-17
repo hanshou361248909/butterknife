@@ -2,7 +2,7 @@ apply plugin: 'com.android.library'
 apply plugin: 'com.kageiit.lintrules'
 
 android {
-  compileSdkVersion versions.compileSdk
+  compileSdkVersion 24
   buildToolsVersion versions.buildTools
 
   defaultConfig {
@@ -21,8 +21,9 @@ android {
 
 dependencies {
   compile project(':butterknife-annotations')
-  compile deps.support.annotations
-  compile deps.support.compat
+  compile 'com.android.support:support-annotations:24.2.1'
+  compile 'com.android.support:support-compat:24.2.1'
+
 
   lintRules project(':butterknife-lint')
 
